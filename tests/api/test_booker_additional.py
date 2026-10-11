@@ -29,7 +29,8 @@ def test_update_booking_without_token(client, booking):
 @pytest.mark.critical_path
 def test_delete_booking_with_token(client, token, booking):
     response = client.delete_booking(booking, token)
-    assert response.status_code == 201  # DELETE даёт 201 Created
+    assert response.status_code == 201
+    assert response.text == "Created"
     assert client.get_booking(booking).status_code == 404
 
 
