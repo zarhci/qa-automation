@@ -13,6 +13,7 @@ pluggy==1.6.0
 Pygments==2.21.0
 PySocks==1.7.1
 pytest==9.1.1
+pytest-html
 pytest-xdist==3.8.0
 python-dotenv==1.2.4
 requests==2.34.2
