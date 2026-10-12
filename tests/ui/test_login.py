@@ -12,8 +12,8 @@ def test_login_with_valid_credentials(driver, ui_base_url):
 
     inventory_page = InventoryPage(driver, ui_base_url)
 
-    assert "/inventory.html" in driver.current_url
     assert inventory_page.title() == "Products"
+    assert "/inventory.html" in driver.current_url
 
 
 @pytest.mark.regression

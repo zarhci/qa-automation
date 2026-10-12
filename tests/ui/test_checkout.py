@@ -23,8 +23,8 @@ def test_checkout_completes_order(driver, ui_base_url):
     checkout_page.fill_info("John", "Doe", "12345")
     checkout_page.finish()
 
-    assert "/checkout-complete.html" in driver.current_url
     assert checkout_page.complete_message() == "Thank you for your order!"
+    assert "/checkout-complete.html" in driver.current_url
 
 
 @pytest.mark.regression

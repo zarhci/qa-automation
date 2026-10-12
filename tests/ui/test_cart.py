@@ -17,5 +17,5 @@ def test_add_backpack_to_cart(driver, ui_base_url):
 
     cart_page = CartPage(driver, ui_base_url)
 
-    assert "/cart.html" in driver.current_url
     assert cart_page.item_name() == "Sauce Labs Backpack"
+    assert "/cart.html" in driver.current_url
