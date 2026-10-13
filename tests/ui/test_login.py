@@ -30,5 +30,5 @@ def test_login_shows_error(driver, ui_base_url, username, password, error):
     page.open_login()
     page.login(username, password)
 
-    assert "/inventory.html" not in driver.current_url
     assert error in page.error_message()
+    assert "/inventory.html" not in driver.current_url

@@ -43,5 +43,5 @@ def test_checkout_requires_first_name(driver, ui_base_url):
     checkout_page = CheckoutPage(driver, ui_base_url)
     checkout_page.continue_checkout()
 
-    assert "/checkout-step-two.html" not in driver.current_url
     assert "First Name is required" in checkout_page.error_message()
+    assert "/checkout-step-two.html" not in driver.current_url
